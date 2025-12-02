@@ -1,6 +1,7 @@
 {
   "name": "tree-sitter-lilypond",
   "version": "0.1.0",
+  "type": "module",
   "description": "LilyPond grammar for tree-sitter",
   "repository": "https://github.com/nivek77pur/tree-sitter-lilypond",
   "license": "MIT",
