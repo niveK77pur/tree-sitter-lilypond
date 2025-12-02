@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "lilypond",
+      "camelcase": "LilyPond",
+      "title": "LilyPond",
+      "scope": "source.lilypond",
+      "file-types": [
+        "lilypond"
+      ],
+      "injection-regex": "^lilypond$",
+      "class-name": "TreeSitterLilypond"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "LilyPond grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "niveK77pur",
+        "email": "kevinbiewesch@yahoo.fr",
+        "url": "https://github.com/niveK77pur"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/niveK77pur/tree-sitter-lilypond"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
