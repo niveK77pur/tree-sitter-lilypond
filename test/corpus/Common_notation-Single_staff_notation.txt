@@ -56,3 +56,39 @@ Bar number check
         (bar_check_event)
         (bar_number_check (number))
         ))
+
+==============
+Key signatures
+==============
+{
+  \key d \major
+  d'4 fis a c |
+  \bar "||" \key c \minor
+  c,4 ees g b |
+  % Using a custom defined mode
+  \key c \freygish c'4 des e f |
+}
+--------------
+(source_file
+    (music
+        (key_change_event pitch: (note_name) mode: (mode))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (bar_check_event)
+        (bar_event type: (text))
+        (key_change_event pitch: (note_name) mode: (mode))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (bar_check_event)
+        (comment)
+        (key_change_event pitch: (note_name) mode: (mode))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (bar_check_event)
+        ))
