@@ -1,0 +1,141 @@
+============================
+Single line comment in music
+============================
+{
+    a4 a a a
+    % this comment refers to the next line with the two bs
+    b2 b
+}
+----------------------------
+(source_file
+    (music
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (comment)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        ))
+
+================================
+Single line comment in top level
+================================
+% this comment refers to the music starting on the next line
+{
+    a4 a a a
+    b2 b
+}
+----------------------------
+(source_file
+    (comment)
+    (music
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        ))
+
+==========================================
+Single line comment in music and top level
+==========================================
+% this comment refers to the music starting on the next line
+{
+    a4 a a a
+    % this comment refers to the next line with the two bs
+    b2 b
+}
+----------------------------
+(source_file
+    (comment)
+    (music
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (comment)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        ))
+
+======================
+Block comment in music
+======================
+{
+  % notes for twinkle twinkle follow
+  c4 c g' g a a g2
+
+  %{
+    This line, and the notes below are ignored,
+    since they are in a block comment.
+
+    f4 f e e d d c2
+  %}
+}
+----------------------
+(source_file
+    (music
+        (comment)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name) duration: (steno_duration))
+        (block_comment)
+        ))
+
+==========================
+Block comment in top level
+==========================
+{
+  % notes for twinkle twinkle follow
+  c4 c g' g a a g2
+}
+%{
+  This line, and the notes below are ignored,
+  since they are in a block comment.
+
+  f4 f e e d d c2
+%}
+----------------------
+(source_file
+    (music
+        (comment)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name) duration: (steno_duration))
+        )
+    (block_comment)
+    )
+
+============================
+Block comment in single line
+============================
+%{ Another comment here %}
+{
+  % notes for twinkle twinkle follow
+  c4 c g' g a a g2
+  %{ Another comment here %}
+}
+----------------------
+(source_file
+    (block_comment)
+    (music
+        (comment)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name) duration: (steno_duration))
+        (block_comment)
+        ))
