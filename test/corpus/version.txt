@@ -1,0 +1,27 @@
+===============================
+Version at top level with music
+===============================
+\version "2.25.30"
+{ c4 d e}
+-------------------------------
+(source_file
+    (version_statement (text))
+    (music
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        ))
+
+====================
+Version inside music
+====================
+
+{ c4 d e \version "2.25.30" }
+--------------------
+(source_file
+    (music
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (version_statement (text))
+        ))
