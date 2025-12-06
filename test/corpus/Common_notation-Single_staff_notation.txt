@@ -12,3 +12,30 @@ Bar lines
         (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (bar_event type: (text))
         ))
+
+==========
+Bar checks
+==========
+{
+  g'1 | e1 | c2. c' | g4 c g e | c4 r r2 |
+}
+----------
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (bar_check_event)
+        (note name: (note_name) duration: (steno_duration))
+        (bar_check_event)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) octave: (note_octave))
+        (bar_check_event)
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (bar_check_event)
+        (note name: (note_name) duration: (steno_duration))
+        (rest)
+        (rest duration: (steno_duration))
+        (bar_check_event)
+        ))
