@@ -154,3 +154,33 @@ Music with tempo markings
         (note name: (note_name))
         (note name: (note_name))
         ))
+
+=======================
+Music with clef changes
+=======================
+
+{
+  \clef treble
+  c'1
+  \clef alto
+  c1
+  \clef tenor
+  c1
+  \clef bass
+  c1
+}
+
+-----------------------
+
+(source_file
+    (music
+        (clef (clef_name))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (clef (clef_name))
+        (note name: (note_name) duration: (steno_duration))
+        (clef (clef_name))
+        (note name: (note_name) duration: (steno_duration))
+        (clef (clef_name))
+        (note name: (note_name) duration: (steno_duration))
+        ))
+
