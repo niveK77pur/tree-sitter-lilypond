@@ -1,0 +1,88 @@
+============================
+Simple standalone music file
+============================
+
+{
+  c e g e
+}
+
+----------------------------
+
+(source_file
+    (music
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))))
+
+=============================
+Standalone music with octaves
+=============================
+
+{
+  a' a, c' f,
+  g g'' a,, f'
+}
+
+-----------------------------
+
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (note_octave))
+        ))
+
+===============================
+Standalone music with durations
+===============================
+
+{
+  a'4 a a4. a8
+  a8. a16 a a8. a8 a4.
+}
+
+-------------------------------
+
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (note_duration))
+        ))
+
+===========================
+Standalone music with rests
+===========================
+
+{
+  a'4 r r2
+  r8 a r4 r4. r8
+}
+
+---------------------------
+
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (rest)
+        (rest duration: (note_duration))
+        (rest duration: (note_duration))
+        (note name: (note_name))
+        (rest duration: (note_duration))
+        (rest duration: (note_duration))
+        (rest duration: (note_duration))
+        ))
+
