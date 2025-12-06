@@ -174,13 +174,13 @@ Music with clef changes
 
 (source_file
     (music
-        (clef (clef_name))
+        (clef (clef_style))
         (note name: (note_name) octave: (note_octave) duration: (steno_duration))
-        (clef (clef_name))
+        (clef (clef_style))
         (note name: (note_name) duration: (steno_duration))
-        (clef (clef_name))
+        (clef (clef_style))
         (note name: (note_name) duration: (steno_duration))
-        (clef (clef_name))
+        (clef (clef_style))
         (note name: (note_name) duration: (steno_duration))
         ))
 

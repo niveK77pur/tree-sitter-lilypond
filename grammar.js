@@ -167,7 +167,7 @@ export default grammar({
       seq(
         "\\clef",
         optional('"'),
-        $.clef_name,
+        $.clef_style,
         optional(choice($.clef_transpose, $.clef_optional_transpose)),
         optional('"'),
       ),
@@ -176,7 +176,7 @@ export default grammar({
      * See: https://lilypond.org/doc/v2.25/Documentation/notation/clef-styles
      */
     //  {{{
-    clef_name: (_) =>
+    clef_style: (_) =>
       choice(
         // standard clefs
         "treble",

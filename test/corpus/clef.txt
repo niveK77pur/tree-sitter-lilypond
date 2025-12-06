@@ -12,12 +12,12 @@ Transposed clefs
 ----------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name) (clef_transpose))
-        (clef (clef_name) (clef_transpose))
-        (clef (clef_name) (clef_transpose))
-        (clef (clef_name) (clef_transpose))
-        (clef (clef_name) (clef_transpose))
+        (clef (clef_style))
+        (clef (clef_style) (clef_transpose))
+        (clef (clef_style) (clef_transpose))
+        (clef (clef_style) (clef_transpose))
+        (clef (clef_style) (clef_transpose))
+        (clef (clef_style) (clef_transpose))
         ))
 
 =========================
@@ -30,8 +30,8 @@ Optional transposed clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name) (clef_optional_transpose))
-        (clef (clef_name) (clef_optional_transpose))
+        (clef (clef_style) (clef_optional_transpose))
+        (clef (clef_style) (clef_optional_transpose))
         ))
 
 ====================
@@ -64,28 +64,28 @@ Standard clef styles
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
         ))
 
 ======================
@@ -98,8 +98,8 @@ Percussion staff clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name))
+        (clef (clef_style))
+        (clef (clef_style))
         ))
 
 =========
@@ -112,8 +112,8 @@ Tab clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name))
+        (clef (clef_style))
+        (clef (clef_style))
         ))
 
 =============================
@@ -140,22 +140,22 @@ Ancient gregorian music clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
         ))
 
 ============================
@@ -202,42 +202,42 @@ Ancient mensural music clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
-        (clef (clef_name))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
+        (clef (clef_style))
         ))
 
 
@@ -250,6 +250,6 @@ Ancient kievan music clefs
 -------------------------
 (source_file
     (music
-        (clef (clef_name))
+        (clef (clef_style))
         ))
 
