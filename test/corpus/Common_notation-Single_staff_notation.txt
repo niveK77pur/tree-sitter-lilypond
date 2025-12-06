@@ -5,11 +5,11 @@ Bar lines
 ---------
 (source_file
     (music
-        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
         (note name: (note_name) duration: (steno_duration))
         (bar_event type: (text))
         (note name: (note_name) duration: (steno_duration))
-        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
         (bar_event type: (text))
         ))
 
@@ -22,12 +22,12 @@ Bar checks
 ----------
 (source_file
     (music
-        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
         (bar_check_event)
         (note name: (note_name) duration: (steno_duration))
         (bar_check_event)
         (note name: (note_name) duration: (steno_duration))
-        (note name: (note_name) octave: (note_octave))
+        (note name: (note_name) octave: (quotes))
         (bar_check_event)
         (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
@@ -49,7 +49,7 @@ Bar number check
 ----------
 (source_file
     (music
-        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (note name: (note_name) octave: (quotes) duration: (steno_duration))
         (bar_check_event)
         (bar_number_check (number))
         (note name: (note_name) duration: (steno_duration))

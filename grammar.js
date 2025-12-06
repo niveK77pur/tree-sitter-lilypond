@@ -40,7 +40,7 @@ export default grammar({
     note: ($) =>
       seq(
         field("name", $.note_name),
-        optional(field("octave", $.note_octave)),
+        optional(field("octave", $.quotes)),
         optional(field("duration", $.steno_duration)),
       ),
 
@@ -138,7 +138,11 @@ export default grammar({
         // ),
       ), //  }}}
 
-    note_octave: (_) => choice(repeat1("'"), repeat1(",")),
+    /**
+     * The `quotes` relate to the octave marking attached to notes.
+     * See: https://lilypond.org/doc/v2.25/Documentation/learning/pitches
+     */
+    quotes: (_) => choice(repeat1("'"), repeat1(",")),
 
     steno_duration: (_) => /[0-9]+\.*/,
 
