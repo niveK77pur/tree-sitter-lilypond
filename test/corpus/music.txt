@@ -86,3 +86,34 @@ Standalone music with rests
         (rest duration: (note_duration))
         ))
 
+
+==========================
+Music with time signatures
+==========================
+
+{
+  \time 3/4
+  a'4 a a
+  \time 6/8
+  a4. a
+  \time 4/4
+  a4 a a a
+}
+
+--------------------------
+
+(source_file
+    (music
+        (time_signature numerator: (number) denominator: (number))
+        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (time_signature numerator: (number) denominator: (number))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name))
+        (time_signature numerator: (number) denominator: (number))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        ))
