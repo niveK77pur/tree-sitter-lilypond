@@ -39,3 +39,20 @@ Bar checks
         (rest duration: (steno_duration))
         (bar_check_event)
         ))
+
+================
+Bar number check
+================
+{
+  g'1 |\barNumberCheck 2 e1 | \barNumberCheck 3
+}
+----------
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (bar_check_event)
+        (bar_number_check (number))
+        (note name: (note_name) duration: (steno_duration))
+        (bar_check_event)
+        (bar_number_check (number))
+        ))
