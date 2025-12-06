@@ -51,16 +51,16 @@ Standalone music with durations
 
 (source_file
     (music
-        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (note name: (note_name))
-        (note name: (note_name) duration: (note_duration))
-        (note name: (note_name) duration: (note_duration))
-        (note name: (note_name) duration: (note_duration))
-        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
-        (note name: (note_name) duration: (note_duration))
-        (note name: (note_name) duration: (note_duration))
-        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
         ))
 
 ===========================
@@ -76,14 +76,14 @@ Standalone music with rests
 
 (source_file
     (music
-        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (rest)
-        (rest duration: (note_duration))
-        (rest duration: (note_duration))
+        (rest duration: (steno_duration))
+        (rest duration: (steno_duration))
         (note name: (note_name))
-        (rest duration: (note_duration))
-        (rest duration: (note_duration))
-        (rest duration: (note_duration))
+        (rest duration: (steno_duration))
+        (rest duration: (steno_duration))
+        (rest duration: (steno_duration))
         ))
 
 
@@ -105,14 +105,14 @@ Music with time signatures
 (source_file
     (music
         (time_signature numerator: (number) denominator: (number))
-        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
         (time_signature numerator: (number) denominator: (number))
-        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
         (time_signature numerator: (number) denominator: (number))
-        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
         (note name: (note_name))
@@ -140,16 +140,16 @@ Music with tempo markings
     (music
         (time_signature numerator: (number) denominator: (number))
         (tempo_event text: (text))
-        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
         (time_signature numerator: (number) denominator: (number))
-        (tempo_event duration: (note_duration) tempo_range: (tempo_range (number)))
-        (note name: (note_name) duration: (note_duration))
+        (tempo_event duration: (steno_duration) tempo_range: (tempo_range (number)))
+        (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
         (time_signature numerator: (number) denominator: (number))
-        (tempo_event text: (text) duration: (note_duration) tempo_range: (tempo_range (number) (number)))
-        (note name: (note_name) duration: (note_duration))
+        (tempo_event text: (text) duration: (steno_duration) tempo_range: (tempo_range (number) (number)))
+        (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
         (note name: (note_name))

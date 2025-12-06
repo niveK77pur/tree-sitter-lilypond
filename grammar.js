@@ -24,10 +24,10 @@ export default grammar({
       seq(
         field("name", $.note_name),
         optional(field("octave", $.note_octave)),
-        optional(field("duration", $.note_duration)),
+        optional(field("duration", $.steno_duration)),
       ),
 
-    rest: ($) => seq("r", optional(field("duration", $.note_duration))),
+    rest: ($) => seq("r", optional(field("duration", $.steno_duration))),
 
     /** Notes names and accidentals in different languages
      * See: https://lilypond.org/doc/v2.25/Documentation/notation/writing-pitches#note-names-in-other-languages
@@ -123,7 +123,7 @@ export default grammar({
 
     note_octave: (_) => choice(repeat1("'"), repeat1(",")),
 
-    note_duration: (_) => /[0-9]+\.*/,
+    steno_duration: (_) => /[0-9]+\.*/,
 
     number: (_) => /[0-9]+/,
     text: (_) => /".*"/,
@@ -143,7 +143,7 @@ export default grammar({
         choice(
           seq(
             optional(field("text", $.text)),
-            field("duration", $.note_duration),
+            field("duration", $.steno_duration),
             "=",
             field("tempo_range", $.tempo_range),
           ),
@@ -151,7 +151,7 @@ export default grammar({
             field("text", $.text),
             optional(
               seq(
-                field("duration", $.note_duration),
+                field("duration", $.steno_duration),
                 "=",
                 field("tempo_range", $.tempo_event),
               ),
