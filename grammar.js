@@ -163,9 +163,17 @@ export default grammar({
 
     tempo_range: ($) => choice($.number, seq($.number, "-", $.number)),
 
-    clef: ($) => seq("\\clef", $.clef_name),
+    clef: ($) =>
+      seq(
+        "\\clef",
+        optional('"'),
+        $.clef_name,
+        optional(choice($.clef_transpose, $.clef_optional_transpose)),
+        optional('"'),
+      ),
 
-    clef_name: (_) => choice("treble", "alto", "tenor", "bass"),
+    clef_transpose: (_) => /[_^]\d+/,
+    clef_optional_transpose: (_) => /[_^][\[(]\d+[\])]/,
   },
 });
 
