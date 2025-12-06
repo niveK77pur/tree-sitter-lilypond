@@ -33,6 +33,8 @@ export default grammar({
         $.tempo_event,
         $.clef,
         $.bar_event,
+        $.bar_check_event,
+        $.bar_number_check,
       ),
 
     note: ($) =>
@@ -284,6 +286,8 @@ export default grammar({
     clef_optional_transpose: (_) => /[_^][\[(]\d+[\])]/,
 
     bar_event: ($) => seq("\\bar", field("type", $.text)),
+    bar_check_event: (_) => "|",
+    bar_number_check: ($) => seq("\\barNumberCheck", $.number),
   },
 });
 
