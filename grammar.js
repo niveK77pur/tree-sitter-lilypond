@@ -26,7 +26,14 @@ export default grammar({
 
     /** Items within a music block */
     _music_list: ($) =>
-      choice($.note, $.rest, $.time_signature_event, $.tempo_event, $.clef),
+      choice(
+        $.note,
+        $.rest,
+        $.time_signature_event,
+        $.tempo_event,
+        $.clef,
+        $.bar_event,
+      ),
 
     note: ($) =>
       seq(
@@ -275,6 +282,8 @@ export default grammar({
 
     clef_transpose: (_) => /[_^]\d+/,
     clef_optional_transpose: (_) => /[_^][\[(]\d+[\])]/,
+
+    bar_event: ($) => seq("\\bar", field("type", $.text)),
   },
 });
 
