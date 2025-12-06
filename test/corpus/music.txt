@@ -117,3 +117,40 @@ Music with time signatures
         (note name: (note_name))
         (note name: (note_name))
         ))
+
+=========================
+Music with tempo markings
+=========================
+
+{
+  \time 3/4
+  \tempo "Andante"
+  a'4 a a
+  \time 6/8
+  \tempo 4. = 96
+  a4. a
+  \time 4/4
+  \tempo "Presto" 4 = 120 - 132
+  a4 a a a
+}
+
+-------------------------
+
+(source_file
+    (music
+        (time_signature numerator: (number) denominator: (number))
+        (tempo_event text: (text))
+        (note name: (note_name) octave: (note_octave) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (time_signature numerator: (number) denominator: (number))
+        (tempo_event duration: (note_duration) tempo_range: (tempo_range (number)))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name))
+        (time_signature numerator: (number) denominator: (number))
+        (tempo_event text: (text) duration: (note_duration) tempo_range: (tempo_range (number) (number)))
+        (note name: (note_name) duration: (note_duration))
+        (note name: (note_name))
+        (note name: (note_name))
+        (note name: (note_name))
+        ))
