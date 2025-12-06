@@ -10,9 +10,13 @@
 export default grammar({
   name: "lilypond",
 
+  extras: ($) => [/\s/, $.version_statement],
+
   rules: {
     // TODO: add the actual grammar rules
     source_file: ($) => $.music,
+
+    version_statement: ($) => seq("\\version", $.text),
 
     /** A music block */
     music: ($) => seq("{", repeat($._music_list), "}"),
