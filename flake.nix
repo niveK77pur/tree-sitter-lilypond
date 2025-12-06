@@ -16,6 +16,7 @@
         name = "tree-sitter-lilypond";
         packages = [
           pkgs.gcc
+          pkgs.just
           pkgs.nodejs-slim
           pkgs.prettierd
           pkgs.tree-sitter
