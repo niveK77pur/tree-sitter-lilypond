@@ -18,7 +18,8 @@ export default grammar({
     music: ($) => seq("{", repeat($._music_list), "}"),
 
     /** Items within a music block */
-    _music_list: ($) => choice($.note, $.rest, $.time_signature, $.tempo_event),
+    _music_list: ($) =>
+      choice($.note, $.rest, $.time_signature_event, $.tempo_event),
 
     note: ($) =>
       seq(
@@ -128,7 +129,7 @@ export default grammar({
     number: (_) => /[0-9]+/,
     text: (_) => /".*"/,
 
-    time_signature: ($) =>
+    time_signature_event: ($) =>
       // TODO: Scheme fractional time signature: https://lilypond.org/doc/v2.25/Documentation/notation/displaying-rhythms.html
       seq(
         "\\time",

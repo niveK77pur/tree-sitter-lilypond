@@ -104,14 +104,14 @@ Music with time signatures
 
 (source_file
     (music
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
@@ -138,16 +138,16 @@ Music with tempo markings
 
 (source_file
     (music
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (tempo_event text: (text))
         (note name: (note_name) octave: (note_octave) duration: (steno_duration))
         (note name: (note_name))
         (note name: (note_name))
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (tempo_event duration: (steno_duration) tempo_range: (tempo_range (number)))
         (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
-        (time_signature numerator: (number) denominator: (number))
+        (time_signature_event numerator: (number) denominator: (number))
         (tempo_event text: (text) duration: (steno_duration) tempo_range: (tempo_range (number) (number)))
         (note name: (note_name) duration: (steno_duration))
         (note name: (note_name))
