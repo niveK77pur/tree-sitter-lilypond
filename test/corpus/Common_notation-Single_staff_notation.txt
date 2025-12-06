@@ -1,0 +1,14 @@
+=========
+Bar lines
+=========
+{ g'1 e1 \bar "||" c2. c'4 \bar "|." }
+---------
+(source_file
+    (music
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (note name: (note_name) duration: (steno_duration))
+        (bar_event type: (text))
+        (note name: (note_name) duration: (steno_duration))
+        (note name: (note_name) octave: (note_octave) duration: (steno_duration))
+        (bar_event type: (text))
+        ))
