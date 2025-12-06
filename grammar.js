@@ -35,6 +35,7 @@ export default grammar({
         $.bar_event,
         $.bar_check_event,
         $.bar_number_check,
+        $.key_change_event,
       ),
 
     note: ($) =>
@@ -292,6 +293,14 @@ export default grammar({
     bar_event: ($) => seq("\\bar", field("type", $.text)),
     bar_check_event: (_) => "|",
     bar_number_check: ($) => seq("\\barNumberCheck", $.number),
+
+    key_change_event: ($) =>
+      seq("\\key", field("pitch", $.note_name), field("mode", $.mode)),
+    /**
+     * Mode for a key change event. It is possible to define custom modes, so
+     * we cannot confidently list all possibilities
+     */
+    mode: (_) => /\\\w+/,
   },
 });
 
