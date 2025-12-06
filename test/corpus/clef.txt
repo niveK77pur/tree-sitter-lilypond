@@ -1,0 +1,255 @@
+================
+Transposed clefs
+================
+{
+    \clef treble
+    \clef "treble_8"
+    \clef "bass^15"
+    \clef "alto_2"
+    \clef "G_8"
+    \clef "F^5"
+}
+----------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name) (clef_transpose))
+        (clef (clef_name) (clef_transpose))
+        (clef (clef_name) (clef_transpose))
+        (clef (clef_name) (clef_transpose))
+        (clef (clef_name) (clef_transpose))
+        ))
+
+=========================
+Optional transposed clefs
+=========================
+{
+    \clef "treble_(8)"
+    \clef "bass^[15]"
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name) (clef_optional_transpose))
+        (clef (clef_name) (clef_optional_transpose))
+        ))
+
+====================
+Standard clef styles
+====================
+{
+    \clef G
+    \clef "G2"
+    \clef treble
+    \clef violin
+    \clef french
+    \clef GG
+    \clef tenorG
+    \clef soprano
+    \clef mezzosoprano
+    \clef C
+    \clef alto
+    \clef tenor
+    \clef baritone
+    \clef varC
+    \clef altovarC
+    \clef tenorvarC
+    \clef baritonevarC
+    \clef varbaritone
+    \clef baritonevarF
+    \clef F
+    \clef bass
+    \clef subbass
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        ))
+
+======================
+Percussion staff clefs
+======================
+{
+    \clef percussion
+    \clef varpercussion
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name))
+        ))
+
+=========
+Tab clefs
+=========
+{
+    \clef tab
+    \clef moderntab
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name))
+        ))
+
+=============================
+Ancient gregorian music clefs
+=============================
+{
+    \clef "vaticana-do1"
+    \clef "vaticana-do2"
+    \clef "vaticana-do3"
+    \clef "vaticana-fa1"
+    \clef "vaticana-fa2"
+    \clef "medicaea-do1"
+    \clef "medicaea-do2"
+    \clef "medicaea-do3"
+    \clef "medicaea-fa1"
+    \clef "medicaea-fa2"
+    \clef "hufnagel-do1"
+    \clef "hufnagel-do2"
+    \clef "hufnagel-do3"
+    \clef "hufnagel-fa1"
+    \clef "hufnagel-fa2"
+    \clef "hufnagel-do-fa"
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        ))
+
+============================
+Ancient mensural music clefs
+============================
+{
+    \clef "mensural-c1"
+    \clef "mensural-c2"
+    \clef "mensural-c3"
+    \clef "mensural-c4"
+    \clef "mensural-c5"
+    \clef "mensural-f"
+    \clef "mensural-f2"
+    \clef "mensural-f3"
+    \clef "mensural-f4"
+    \clef "mensural-f5"
+    \clef "mensural-g1"
+    \clef "mensural-g2"
+    \clef "mensural-g"
+    \clef "blackmensural-c1"
+    \clef "blackmensural-c2"
+    \clef "blackmensural-c3"
+    \clef "blackmensural-c4"
+    \clef "blackmensural-c5"
+    \clef "neomensural-c1"
+    \clef "neomensural-c2"
+    \clef "neomensural-c3"
+    \clef "neomensural-c4"
+    \clef "neomensural-c5"
+    \clef "petrucci-c1"
+    \clef "petrucci-c2"
+    \clef "petrucci-c3"
+    \clef "petrucci-c4"
+    \clef "petrucci-c5"
+    \clef "petrucci-f"
+    \clef "petrucci-f2"
+    \clef "petrucci-f3"
+    \clef "petrucci-f4"
+    \clef "petrucci-f5"
+    \clef "petrucci-g1"
+    \clef "petrucci-g2"
+    \clef "petrucci-g"
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        (clef (clef_name))
+        ))
+
+
+==========================
+Ancient kievan music clefs
+==========================
+{
+    \clef "kievan-do"
+}
+-------------------------
+(source_file
+    (music
+        (clef (clef_name))
+        ))
+
