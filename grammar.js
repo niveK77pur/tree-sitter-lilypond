@@ -19,7 +19,7 @@ export default grammar({
 
     /** Items within a music block */
     _music_list: ($) =>
-      choice($.note, $.rest, $.time_signature_event, $.tempo_event),
+      choice($.note, $.rest, $.time_signature_event, $.tempo_event, $.clef),
 
     note: ($) =>
       seq(
@@ -162,6 +162,10 @@ export default grammar({
       ),
 
     tempo_range: ($) => choice($.number, seq($.number, "-", $.number)),
+
+    clef: ($) => seq("\\clef", $.clef_name),
+
+    clef_name: (_) => choice("treble", "alto", "tenor", "bass"),
   },
 });
 
