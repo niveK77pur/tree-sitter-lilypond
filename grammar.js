@@ -134,7 +134,7 @@ export default grammar({
     steno_duration: (_) => /[0-9]+\.*/,
 
     number: (_) => /[0-9]+/,
-    text: (_) => /".*"/,
+    text: (_) => /"[^"]*"/,
 
     time_signature_event: ($) =>
       // TODO: Scheme fractional time signature: https://lilypond.org/doc/v2.25/Documentation/notation/displaying-rhythms.html
