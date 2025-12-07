@@ -7,6 +7,11 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
+// Re-use existing lilypond-scheme work to parse embedded scheme
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const SchemeRules = require("./tree-sitter-lilypond/lilypond-scheme/rules.js");
+
 export default grammar({
   name: "lilypond",
 
@@ -36,6 +41,7 @@ export default grammar({
         $.bar_check_event,
         $.bar_number_check,
         $.key_change_event,
+        $.embedded_scheme,
       ),
 
     note: ($) =>
@@ -301,6 +307,29 @@ export default grammar({
      * we cannot confidently list all possibilities
      */
     mode: (_) => /\\\w+/,
+
+    ...SchemeRules, // External rules taken from submodule {{{
+    // // Embedded Scheme: #(...) or $(...) with optional @ for splicing
+    // embedded_scheme: ($) =>
+    //   seq(alias(/[#$]@?/, $.embedded_scheme_prefix), $.embedded_scheme_text),
+    // Taken from tree-sitter-lilypond/lilypond/rules.js
+    embedded_scheme: ($) =>
+      seq(alias(/[#$]@?/, $.embedded_scheme_prefix), $.embedded_scheme_text),
+    // Taken from tree-sitter-lilypond/lilypond/rules.js
+    embedded_scheme_text: ($) =>
+      choice(
+        $._scheme_simple_datum,
+        seq(repeat($.scheme_comment), $._scheme_compound_datum),
+      ),
+    // Override to embed our own lilypond grammar
+    // Adapted from tree-sitter-lilypond/lilypond-scheme/rules.js
+    scheme_embedded_lilypond_text: ($) =>
+      choice(
+        repeat1($.comment),
+
+        seq(repeat($.comment), repeat1($._music_list)),
+      ),
+    //  }}}
   },
 });
 

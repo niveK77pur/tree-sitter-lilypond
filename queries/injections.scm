@@ -1,0 +1,1 @@
+../tree-sitter-lilypond/queries/injections.scm
