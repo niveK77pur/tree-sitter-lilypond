@@ -35,6 +35,7 @@ export default grammar({
         $.note,
         $.rest,
         $.time_signature_event,
+        $.override_time_signature_settings,
         $.tempo_event,
         $.clef,
         $.bar_event,
@@ -170,6 +171,15 @@ export default grammar({
         "\\time",
         optional(field("beatStructure", $.beat_structure)),
         choice(alias($.fraction, "_"), $.embedded_scheme),
+      ),
+
+    override_time_signature_settings: ($) =>
+      seq(
+        "\\overrideTimeSignatureSettings",
+        field("timeSignature", $.fraction),
+        field("beatBase", choice($.fraction, $.embedded_scheme)),
+        field("beatStructure", $.beat_structure),
+        field("beamExceptions", $.embedded_scheme),
       ),
 
     tempo_event: ($) =>
