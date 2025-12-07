@@ -162,18 +162,14 @@ export default grammar({
      */
     beat_structure: ($) => seq($.number, repeat(seq(",", $.number))),
 
+    fraction: ($) =>
+      seq(field("numerator", $.number), "/", field("denominator", $.number)),
+
     time_signature_event: ($) =>
       seq(
         "\\time",
         optional(field("beatStructure", $.beat_structure)),
-        choice(
-          seq(
-            field("numerator", $.number),
-            "/",
-            field("denominator", $.number),
-          ),
-          $.embedded_scheme,
-        ),
+        choice(alias($.fraction, "_"), $.embedded_scheme),
       ),
 
     tempo_event: ($) =>
