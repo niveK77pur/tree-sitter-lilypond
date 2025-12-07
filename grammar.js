@@ -156,13 +156,24 @@ export default grammar({
     number: (_) => /[0-9]+/,
     text: (_) => /"[^"]*"/,
 
+    /**
+     * The beat structure that can be used for a time signature.
+     * See: https://lilypond.org/doc/v2.25/Documentation/notation/displaying-rhythms.html#time-signature
+     */
+    beat_structure: ($) => seq($.number, repeat(seq(",", $.number))),
+
     time_signature_event: ($) =>
-      // TODO: Scheme fractional time signature: https://lilypond.org/doc/v2.25/Documentation/notation/displaying-rhythms.html
       seq(
         "\\time",
-        field("numerator", $.number),
-        "/",
-        field("denominator", $.number),
+        optional(field("beatStructure", $.beat_structure)),
+        choice(
+          seq(
+            field("numerator", $.number),
+            "/",
+            field("denominator", $.number),
+          ),
+          $.embedded_scheme,
+        ),
       ),
 
     tempo_event: ($) =>
