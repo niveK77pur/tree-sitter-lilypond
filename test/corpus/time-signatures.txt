@@ -1,0 +1,87 @@
+====================
+Basic time signature
+====================
+{ \time 2/4 }
+--------------------
+(source_file
+    (music
+        (time_signature_event numerator: (number) denominator: (number))
+        ))
+
+=========================
+Fractional time signature
+=========================
+{
+    \time #'(5/2 . 4)
+    \time #'(2 . 1/2)
+}
+-------------------------
+(source_file
+    (music
+        (time_signature_event (embedded_scheme
+            (embedded_scheme_prefix)
+            (embedded_scheme_text
+              (scheme_quote
+                (scheme_list
+                  (scheme_number)
+                  (scheme_symbol)
+                  (scheme_number))))
+            ))
+        (time_signature_event (embedded_scheme
+            (embedded_scheme_prefix)
+            (embedded_scheme_text
+              (scheme_quote
+                (scheme_list
+                  (scheme_number)
+                  (scheme_symbol)
+                  (scheme_number))))
+            ))
+        ))
+
+==================================
+Time signature with beat structure
+==================================
+{
+    \time 2,2,3 7/8
+}
+----------------------------------
+(source_file
+    (music
+        (time_signature_event
+            beatStructure: (beat_structure
+                (number)
+                (number)
+                (number))
+            numerator: (number)
+            denominator: (number))
+        ))
+
+================================
+Override time signature settings
+================================
+{
+    \overrideTimeSignatureSettings
+        4/4        % timeSignature
+        #1/4       % beatBase
+        3,1        % beatStructure
+        #'()       % beamExceptions
+}
+--------------------------------
+(source_file
+    (music
+        (override_time_signature_settings
+            timeSignature: (fraction numerator: (number) denominator: (number))
+            (comment)
+            beatBase: (embedded_scheme (embedded_scheme_prefix) (embedded_scheme_text (scheme_number) ))
+            (comment)
+            beatStructure: (beat_structure
+                (number)
+                (number))
+            (comment)
+            beamExceptions: (embedded_scheme
+                (embedded_scheme_prefix)
+                (embedded_scheme_text (scheme_quote (scheme_list)))
+                )
+            )
+        (comment)
+        ))
